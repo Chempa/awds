@@ -88,10 +88,10 @@ for ($i=0; $i < count($all_students); $i++) {
                     	<label for="pwd">Gender:</label>
                         <div class="form-check mb-2 mr-sm-2">
                             <label class="form-check-label">
-                                <input class="form-check-input" name="gender" value="male" type="radio"> Male
+                                <input class="form-check-input" name="gender" value="male" type="radio" required> Male
                             </label>
                             <label class="form-check-label ml-2">
-                                <input class="form-check-input" name="gender" value="female" type="radio"> Female
+                                <input class="form-check-input" name="gender" value="female" type="radio" required> Female
                             </label>
                         </div> 
                     </div>
@@ -138,7 +138,7 @@ for ($i=0; $i < count($all_students); $i++) {
                             }else{
                             ?>
                             <tr>
-                                <td><?php echo $stu->fullname; ?></td>
+                                <td><?php echo ucwords($stu->fullname); ?></td>
                                 <td><?php echo $stu->studentid; ?></td>
                             </tr> 
                             <?php
