@@ -153,7 +153,7 @@ for ($i=0; $i < count($all_students); $i++) {
             </div>
         </div>
     </div>
-    <p class="text-center">Designed By: Chempa<br>email:<a href="mailto:francis.chempa@stu.ucc.edu.gh">francis.chempa@stu.ucc.edu.gh</a></p>
+    <p class="text-center">Developed By: Chempa<br>email:<a href="mailto:francis.chempa@stu.ucc.edu.gh">francis.chempa@stu.ucc.edu.gh</a></p>
 </body>
 
 </html>
