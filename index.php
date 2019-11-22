@@ -14,7 +14,7 @@ if(isset($_GET["download"])){
     $data = "Studend_ID,Fullname,Gender\n";
     for ($i=0; $i < count($all_students); $i++) { 
         $__ = $all_students[$i];
-        $line = $__->studentid.",".$__->fullname.",".$__->gender."\n";
+        $line = strtoupper($__->studentid).",".ucwords(strtolower($__->fullname).",".$__->gender."\n";
         $data = $data . $line;
     } 
     header('Content-Disposition: attachment; filename="file.csv"');
