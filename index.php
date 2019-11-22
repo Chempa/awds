@@ -84,7 +84,7 @@ for ($i=0; $i < count($all_students); $i++) {
                         <label for="pwd">Fullname:</label>
                         <input type="text" class="form-control" id="pwd" placeholder="Enter fullname" name="fullname" required>
                     </div>
-                    <div class="form-group" id="btn-container">
+                    <div class="form-group" >
                     	<label for="pwd">Gender:</label>
                         <div class="form-check mb-2 mr-sm-2">
                             <label class="form-check-label">
