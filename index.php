@@ -132,14 +132,14 @@ for ($i=0; $i < count($all_students); $i++) {
                             ?>
                             <tr id="new_user" style="background-color:lightgrey">
                                 <td><?php echo ucwords(strtolower($stu->fullname)); ?></td>
-                                <td><?php echo $stu->studentid; ?></td>
+                                <td><?php echo strtoupper($stu->studentid); ?></td>
                             </tr>  
                             <?php
                             }else{
                             ?>
                             <tr>
                                 <td><?php echo ucwords(strtolower($stu->fullname)); ?></td>
-                                <td><?php echo $stu->studentid; ?></td>
+                                <td><?php echo strtoupper($stu->studentid); ?></td>
                             </tr> 
                             <?php
                             }
