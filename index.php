@@ -117,8 +117,8 @@ for ($i=0; $i < count($all_students); $i++) {
                 <table class="table">
                     <thead class="thead-light">
                         <tr>
-                            <th>Student ID</th>
                             <th>Fullname</th>
+                            <th>Student ID</th>
                         </tr>
                     </thead>
                     <tbody>
