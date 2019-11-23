@@ -29,13 +29,28 @@ if (isset($_POST['fullname'])) {
     $_studentid = $_POST["studentid"];
     $_fullname = $_POST["fullname"];
     $_gender = $_POST["gender"];
-    $_studentid = strtolower($_studentid);
-    $ret = $_->create($con,$_studentid,$_fullname,$_gender);
-    if($ret == 1){
+    $flag = 0;
+    if(strpos($_studentid,"<")!==false || strpos($_studentid,">")!==false || strpos($_studentid,"*")!==false || strpos($_studentid,";")!==false){
+        $flag = 1;
+    }
+    if(strpos($_fullname,"<")!==false || strpos($_fullname,">")!==false || strpos($_fullname,"*")!==false || strpos($_fullname,";")!==false){
+        $flag = 1;
+    }
+    if(strpos($_gender,"<")!==false || strpos($_gender,">")!==false || strpos($_gender,"*")!==false || strpos($_gender,";")!==false){
+        $flag = 1;
+    }
+    if($flag){
+        $_studentid = "";
+    }
+    else{
+        $_studentid = strtolower($_studentid);
+        $ret = $_->create($con,$_studentid,$_fullname,$_gender);
+        if($ret == 1){
 
-    }else{
+        }else{
 
-    } 
+        } 
+    }
 } else  { 
 }
  
