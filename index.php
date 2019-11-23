@@ -27,6 +27,7 @@ if(isset($_GET["download"])){
 
 if (isset($_POST['fullname'])) { 
     $_studentid = $_POST["studentid"];
+    $_studentid = strtolower($_studentid);
     $_fullname = $_POST["fullname"];
     $_gender = $_POST["gender"];
     $flag = 0;
@@ -43,7 +44,7 @@ if (isset($_POST['fullname'])) {
         $_studentid = "";
     }
     else{
-        $_studentid = strtolower($_studentid);
+        
         $ret = $_->create($con,$_studentid,$_fullname,$_gender);
         if($ret == 1){
 
