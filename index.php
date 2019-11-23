@@ -144,7 +144,7 @@ for ($i=0; $i < count($all_students); $i++) {
                         ?>
 
                             <?php
-                            if ($_studentid == $all_students[$i]->studentid) {
+                            if ($_studentid == strtolower($stu->studentid)) {
                             ?>
                             <tr id="new_user" style="background-color:lightgrey">
                                 <td><?php echo ucwords(strtolower($stu->fullname)); ?></td>
