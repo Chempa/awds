@@ -27,8 +27,8 @@ if(isset($_GET["download"])){
 
 if (isset($_POST['fullname'])) { 
     $_studentid = $_POST["studentid"];
-    $_studentid = strtolower($_studentid);
-    $_fullname = $_POST["fullname"];
+    $_studentid = str_replace(" ","",strtolower($_studentid));
+    $_fullname = str_replace(" ","",$_POST["fullname"]);
     $_gender = $_POST["gender"];
     $flag = 0;
     if(strpos($_studentid,"<")!==false || strpos($_studentid,">")!==false || strpos($_studentid,"*")!==false || strpos($_studentid,";")!==false){
