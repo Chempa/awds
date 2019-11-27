@@ -130,7 +130,7 @@ for ($i=0; $i < count($all_students); $i++) {
                     </div>
                 </div>
                 <h5 id="listtitle">Registered Students</h5>
-                <table class="table">
+                <table class="table" style="overflow:hidden">
                     <thead class="thead-light">
                         <tr>
                             <th>Fullname</th>
