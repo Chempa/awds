@@ -26,6 +26,7 @@ if(isset($_GET["download"])){
 }
 
 if (isset($_POST['fullname'])) { 
+    exit();
     $_studentid = $_POST["studentid"];
     $_studentid = str_replace(" ","",strtolower($_studentid));
     $_fullname = str_replace(" ","",$_POST["fullname"]);
@@ -90,29 +91,29 @@ for ($i=0; $i < count($all_students); $i++) {
         </div>
         <div class="row">
             <div class="col">
-                <form action="./index.php#new_user" class="was-validated" method="post">
+                <form action="#" class="was-validated" method="post">
 
                     <div class="form-group">
                         <label for="uname">Student ID</label>
-                        <input type="text" class="form-control" id="uname" placeholder="Enter student id" name="studentid" required>
+                        <input disabled type="text" class="form-control" id="uname" placeholder="Enter student id" name="studentid" required>
                     </div>
                     <div class="form-group">
                         <label for="pwd">Fullname:</label>
-                        <input type="text" class="form-control" id="pwd" placeholder="Enter fullname" name="fullname" required>
+                        <input disabled type="text" class="form-control" id="pwd" placeholder="Enter fullname" name="fullname" required>
                     </div>
                     <div class="form-group" >
                     	<label for="pwd">Gender:</label>
                         <div class="form-check mb-2 mr-sm-2">
                             <label class="form-check-label">
-                                <input class="form-check-input" name="gender" value="male" type="radio" required> Male
+                                <input disabled class="form-check-input" name="gender" value="male" type="radio" required> Male
                             </label>
                             <label class="form-check-label ml-2">
-                                <input class="form-check-input" name="gender" value="female" type="radio" required> Female
+                                <input disabled class="form-check-input" name="gender" value="female" type="radio" required> Female
                             </label>
                         </div> 
                     </div>
                     <div class="form-group" id="btn-container">
-                        <button id="submit-btn" type="submit" class="btn btn-info">Submit</button>
+                        <button disabled id="submit-btn" type="submit" class="btn btn-info">Submit</button>
                     </div>
 
                 </form>
